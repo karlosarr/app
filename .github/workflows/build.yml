@@ -28,6 +28,6 @@ jobs:
         appName: karlosarr/app
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Collaborators
-        file: app/build/outputs/aab/release/app-release-unsigned.aab
+        file: app/build/outputs/bundle/release/app-release.aab
         notifyTesters: true
         debug: false
