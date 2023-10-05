@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id "org.sonarqube" version "4.3.1.3277
 }
 
 android {
@@ -33,6 +34,14 @@ android {
     buildFeatures {
         viewBinding true
     }
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "karlosarr_app"
+    property "sonar.organization", "karlosarr"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 dependencies {
