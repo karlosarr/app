@@ -3,8 +3,6 @@ name: Create APP and publish
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
