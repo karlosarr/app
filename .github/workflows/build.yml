@@ -22,3 +22,12 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew bundleRelease
+    - name: upload artefact to App Center
+      uses: wzieba/AppCenter-Github-Action@v1
+      with:
+        appName: karlosarr/app
+        token: ${{secrets.APP_CENTER_TOKEN}}
+        group: Collaborators
+        file: app/build/outputs/aab/release/app-release-unsigned.aab
+        notifyTesters: true
+        debug: false
