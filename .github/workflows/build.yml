@@ -17,14 +17,14 @@ jobs:
         java-version: '17'
         distribution: 'zulu'
         cache: gradle
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
     - name: Bump version
       uses: chkfung/android-version-actions@v1.2.1
-      env:
-          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
       with:
         gradlePath: app/build.gradle # or app/build.gradle.kts 
         versionCode: ${{github.run_number}}
-        versionName: $RELEASE_VERSION
+        versionName: ${{ env.RELEASE_VERSION }}
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
