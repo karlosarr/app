@@ -32,7 +32,7 @@ jobs:
       with:
         appName: karlosarr/app
         token: ${{secrets.APP_CENTER_TOKEN}}
-        group: Collaborators
+        group: Collaborators,Public
         file: app/build/outputs/bundle/release/app-release.aab
         notifyTesters: true
         debug: false
