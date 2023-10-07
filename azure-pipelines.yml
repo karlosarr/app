@@ -27,7 +27,7 @@ steps:
     spotBugsAnalysis: false
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)/app/build/outputs/bundle/release/'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/app/build/outputs/bundle/release/'
     Contents: '**.aab'
     TargetFolder: '$(build.artifactstagingdirectory)/'
 - task: PublishBuildArtifacts@1
