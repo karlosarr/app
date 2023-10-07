@@ -19,10 +19,12 @@ jobs:
         cache: gradle
     - name: Bump version
       uses: chkfung/android-version-actions@v1.2.1
+      env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
       with:
         gradlePath: app/build.gradle # or app/build.gradle.kts 
         versionCode: ${{github.run_number}}
-        versionName: 1.0.0
+        versionName: $RELEASE_VERSION
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
