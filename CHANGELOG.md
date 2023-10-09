@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/karlosarr/app/compare/1.0.4...v1.0.5) (2023-10-09)
+
+
+### Bug Fixes
+
+* add pre build ([db510c1](https://github.com/karlosarr/app/commit/db510c1a9bf28872776e5ed29f4f81bd365a60c0))
+
 ## [1.0.2](https://github.com/karlosarr/app/compare/v1.0.1...v1.0.2) (2023-10-07)
 
 
