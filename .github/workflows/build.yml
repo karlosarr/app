@@ -39,3 +39,7 @@ jobs:
         file: app/build/outputs/bundle/release/app-release.aab
         notifyTesters: true
         debug: false
+    - uses: actions/upload-artifact@v3
+      with:
+        name: APP
+        path: app/build/outputs/bundle/release/app-release.aab
