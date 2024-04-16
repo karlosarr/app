@@ -28,6 +28,9 @@ steps:
     spotBugsAnalysis: true
     spotBugsGradlePluginVersionChoice: 'specify'
     spotbugsGradlePluginVersion: '4.7.0'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)/app/build/outputs/bundle/release/'
