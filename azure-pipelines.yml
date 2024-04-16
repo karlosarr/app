@@ -18,13 +18,16 @@ steps:
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     tasks: 'bundleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: true
     sqGradlePluginVersionChoice: 'build'
-    spotBugsAnalysis: false
+    spotBugsAnalysis: true
+    spotBugsGradlePluginVersionChoice: 'specify'
+    spotbugsGradlePluginVersion: '4.7.0'
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)/app/build/outputs/bundle/release/'
