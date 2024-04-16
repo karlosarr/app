@@ -17,7 +17,7 @@ steps:
     scannerMode: 'Other'
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: 'gradlew'
+    gradleWrapperFile: './gradlew'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     tasks: 'bundleRelease'
     publishJUnitResults: false
