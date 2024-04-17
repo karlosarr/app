@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/karlosarr/app/compare/v1.1.0...v1.1.1) (2024-04-17)
+
+
+### Bug Fixes
+
+* Update build.yml ([935d4a2](https://github.com/karlosarr/app/commit/935d4a2827648fbbe11ed9c675b7205936750774))
+
 ## [1.1.0](https://github.com/karlosarr/app/compare/v1.0.0...v1.1.0) (2024-04-16)
 
 
