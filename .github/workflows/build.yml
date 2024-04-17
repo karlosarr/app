@@ -3,7 +3,7 @@ name: Create APP and publish
 on:
   push:
     tags:
-      - '*.*.*'
+      - 'v*.*.*'
 
 jobs:
   build:
